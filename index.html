@@ -1,0 +1,89 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta
+    name="description"
+    content="QuickNotes helps you create, view, and delete notes."
+  >
+  <title>QuickNotes | Simple Note Taking</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="api.js" defer></script>
+</head>
+<body>
+  <header class="site-header">
+    <div class="container">
+      <h1>QuickNotes</h1>
+      <p>Your thoughts, organized in one place.</p>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="notes-section" aria-labelledby="notes-heading">
+      <div class="section-heading">
+        <div>
+          <h2 id="notes-heading">Your Notes</h2>
+          <p>Create a note or review your existing notes.</p>
+        </div>
+
+        <button id="load-btn" type="button">
+          Load Notes
+        </button>
+      </div>
+
+      <p id="status" class="status" role="status" aria-live="polite">
+        Select "Load Notes" to retrieve your notes.
+      </p>
+
+      <section class="form-section" aria-labelledby="form-heading">
+        <h3 id="form-heading">Create a Note</h3>
+
+        <form id="note-form">
+          <div class="form-group">
+            <label for="title-input">Note title</label>
+            <input
+              id="title-input"
+              name="title"
+              type="text"
+              maxlength="100"
+              placeholder="Enter a title"
+              required
+            >
+          </div>
+
+          <div class="form-group">
+            <label for="body-input">Note content</label>
+            <textarea
+              id="body-input"
+              name="body"
+              rows="5"
+              placeholder="Write your note here..."
+              required
+            ></textarea>
+          </div>
+
+          <button id="submit-btn" type="submit">
+            Create Note
+          </button>
+        </form>
+      </section>
+
+      <section class="notes-list-section" aria-labelledby="list-heading">
+        <h3 id="list-heading">Saved Notes</h3>
+
+        <ul id="notes-list" class="notes-list">
+          <!-- Notes will be added here by api.js. -->
+        </ul>
+      </section>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>QuickNotes — a simple note-taking system design project.</p>
+    </div>
+  </footer>
+</body>
+</html>

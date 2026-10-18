@@ -1,0 +1,237 @@
+
+/* QuickNotes - Application Styles */
+
+:root {
+  font-family: Arial, Helvetica, sans-serif;
+  color: #243247;
+  background: #f4f7fb;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  line-height: 1.6;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+}
+
+.container {
+  width: min(100% - 32px, 900px);
+  margin: 0 auto;
+}
+
+.site-header {
+  padding: 32px 0;
+  color: #ffffff;
+  background: #17365d;
+}
+
+.site-header h1 {
+  margin: 0;
+  font-size: 2rem;
+}
+
+.site-header p {
+  margin: 4px 0 0;
+  color: #dce7f5;
+}
+
+main {
+  padding-top: 32px;
+  padding-bottom: 48px;
+}
+
+.notes-section {
+  display: grid;
+  gap: 24px;
+}
+
+.section-heading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+h2,
+h3 {
+  line-height: 1.3;
+}
+
+h2 {
+  margin: 0 0 6px;
+}
+
+h3 {
+  margin: 0 0 16px;
+}
+
+.section-heading p {
+  margin: 0;
+  color: #5d6b7e;
+}
+
+button {
+  border: 0;
+  border-radius: 6px;
+  padding: 10px 16px;
+  color: #ffffff;
+  background: #1769aa;
+  font: inherit;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+button:hover:not(:disabled) {
+  background: #104f82;
+}
+
+button:focus-visible,
+input:focus-visible,
+textarea:focus-visible {
+  outline: 3px solid #8bc7ff;
+  outline-offset: 2px;
+}
+
+button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.status {
+  margin: 0;
+  padding: 12px 14px;
+  border-radius: 6px;
+  background: #e7edf5;
+  color: #34445b;
+}
+
+.status.success {
+  color: #17603a;
+  background: #e5f5eb;
+}
+
+.status.error {
+  color: #9c2525;
+  background: #fdeaea;
+}
+
+.form-section,
+.notes-list-section {
+  padding: 24px;
+  border: 1px solid #e0e6ee;
+  border-radius: 10px;
+  background: #ffffff;
+  box-shadow: 0 3px 12px rgb(25 45 75 / 5%);
+}
+
+#note-form {
+  display: grid;
+  gap: 16px;
+}
+
+.form-group {
+  display: grid;
+  gap: 6px;
+}
+
+label {
+  font-weight: 600;
+}
+
+input,
+textarea {
+  width: 100%;
+  border: 1px solid #cbd5e1;
+  border-radius: 6px;
+  padding: 11px 12px;
+  color: #243247;
+  background: #ffffff;
+  font: inherit;
+}
+
+textarea {
+  resize: vertical;
+}
+
+#submit-btn {
+  justify-self: start;
+}
+
+.notes-list {
+  display: grid;
+  gap: 14px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.note-card {
+  padding: 18px;
+  border: 1px solid #e0e6ee;
+  border-radius: 8px;
+  background: #fbfcfe;
+}
+
+.note-card h4 {
+  margin: 0 0 8px;
+  color: #17365d;
+  font-size: 1.1rem;
+  overflow-wrap: anywhere;
+}
+
+.note-card p {
+  margin: 0 0 14px;
+  white-space: pre-wrap;
+  overflow-wrap: anywhere;
+}
+
+.delete-btn {
+  background: #b83232;
+}
+
+.delete-btn:hover:not(:disabled) {
+  background: #8f2424;
+}
+
+.empty-state {
+  padding: 18px;
+  color: #5d6b7e;
+  text-align: center;
+  border: 1px dashed #cbd5e1;
+  border-radius: 8px;
+}
+
+.site-footer {
+  padding: 20px 0;
+  border-top: 1px solid #e0e6ee;
+  color: #5d6b7e;
+  background: #ffffff;
+  font-size: 0.9rem;
+  text-align: center;
+}
+
+.site-footer p {
+  margin: 0;
+}
+
+@media (max-width: 600px) {
+  .section-heading {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .form-section,
+  .notes-list-section {
+    padding: 18px;
+  }
+
+  .site-header {
+    padding: 24px 0;
+  }
+}
